@@ -96,6 +96,11 @@ const App: React.FC = () => {
           
           {/* Sidebar: Profile & Form */}
           <div className="lg:col-span-5 space-y-8">
+			<a 
+			href="https://aitorblog.infinityfreeapp.com" 
+			className="block transition-transform hover:scale-[1.02] active:scale-95"
+			title="Volver al blog"
+		    >		  
             <ProfileCard 
               name="Aitor"
               email="aitorblog.sustained708@passinbox.com"
