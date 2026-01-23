@@ -20,7 +20,11 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ name, email, xHandle, 
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl rotate-6 opacity-10 group-hover:rotate-12 transition-transform duration-500"></div>
             {/* 50% larger image: w-32 -> w-48 (8rem -> 12rem) */}
-            <div className="w-48 h-48 rounded-3xl overflow-hidden ring-8 ring-white shadow-2xl relative z-10">
+            <a 
+				href="https://aitorblog.infinityfreeapp.com" 
+				className="block cursor-pointer transition-transform active:scale-95"
+			>
+			<div className="w-48 h-48 rounded-3xl overflow-hidden ring-8 ring-white shadow-2xl relative z-10">
               <img 
                 src={imageUrl} 
                 alt={name} 
