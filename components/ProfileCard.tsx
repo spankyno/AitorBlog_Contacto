@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ProfileCardProps {
@@ -19,21 +18,24 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ name, email, xHandle, 
         <div className="flex flex-col items-center text-center relative z-10">
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-3xl rotate-6 opacity-10 group-hover:rotate-12 transition-transform duration-500"></div>
-            {/* 50% larger image: w-32 -> w-48 (8rem -> 12rem) */}
+            
+            {/* ENLACE AÑADIDO AQUÍ */}
             <a 
-				href="https://aitorblog.infinityfreeapp.com" 
-				className="block cursor-pointer transition-transform active:scale-95"
-			>
-			<div className="w-48 h-48 rounded-3xl overflow-hidden ring-8 ring-white shadow-2xl relative z-10">
-              <img 
-                src={imageUrl} 
-                alt={name} 
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Aitor';
-                }}
-              />
-            </div>
+              href="https://aitorblog.infinityfreeapp.com" 
+              title="Volver al blog"
+              className="block cursor-pointer transition-transform active:scale-95"
+            >
+              <div className="w-48 h-48 rounded-3xl overflow-hidden ring-8 ring-white shadow-2xl relative z-10">
+                <img 
+                  src={imageUrl} 
+                  alt={name} 
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Aitor';
+                  }}
+                />
+              </div>
+            </a>
           </div>
           
           <h3 className="text-3xl font-black text-gray-900 mb-2">{name}</h3>
