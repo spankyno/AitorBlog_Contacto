@@ -25,7 +25,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, isSubmitting
     <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
       <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
         <span className="w-2 h-6 bg-purple-600 rounded-full"></span>
-        Nueva Colaboración
+        Nuevo mensaje
       </h3>
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="space-y-1.5">
@@ -87,7 +87,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit, isSubmitting
             isSubmitting ? 'bg-gray-300' : 'bg-gray-900 hover:bg-black hover:scale-[1.02] active:scale-95'
           }`}
         >
-          {isSubmitting ? 'Enviando...' : 'Publicar en el Blog'}
+          {isSubmitting ? 'Enviando...' : 'Enviar comentario'}
         </button>
       </form>
     </div>
