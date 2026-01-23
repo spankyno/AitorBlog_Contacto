@@ -1,0 +1,7 @@
+{
+  "name": "Professional Contact & Collaboration Hub",
+  "description": "A high-end, responsive contact page featuring profile information, a dynamic submission form, and a real-time table of community contributions.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
