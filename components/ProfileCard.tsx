@@ -19,7 +19,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({ name, email, xHandle, 
         <div className="relative mb-10">
           <div className="absolute inset-0 bg-blue-100 rounded-[3rem] rotate-6 scale-105 opacity-30"></div>
           <a 
-            href="https://aitorblog.infinityfreeapp.com" 
+            href="https://aitorsanchez.pages.dev" 
             target="_blank" 
             rel="noopener noreferrer"
             className="block w-48 h-48 rounded-[3rem] overflow-hidden relative z-10 bg-white ring-[10px] ring-white shadow-2xl cursor-pointer hover:ring-blue-500 transition-all duration-500"
