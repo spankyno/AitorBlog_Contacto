@@ -4,7 +4,6 @@ import { ProfileCard } from './components/ProfileCard';
 import { ContactForm } from './components/ContactForm';
 import { SubmissionsTable } from './components/SubmissionsTable';
 import { Submission, FormData } from './types';
-import { getPublicIp } from './services/utils';
 
 const App: React.FC = () => {
   const [submissions, setSubmissions] = useState<Submission[]>([]);
@@ -39,16 +38,16 @@ const App: React.FC = () => {
     fetchSubmissions();
   }, []);
 
-  const handleFormSubmit = async (data: FormData) => {
+  const handleFormSubmit = async (data: FormData & { _hp: string; cfToken: string }) => {
     setIsSubmitting(true);
     try {
-      const ip = await getPublicIp();
       const payload = {
-        direccion_ip: ip,
         nombre: data.nombre,
         email: data.email,
         asunto: data.asunto,
-        comentario: data.comentario
+        comentario: data.comentario,
+        _hp: data._hp,
+        cfToken: data.cfToken,
       };
 
       const response = await fetch('/api/submissions', {
