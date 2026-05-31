@@ -3,6 +3,13 @@
   "buildCommand": "vite build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://aitorsanchez.pages.dev/contacto/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
